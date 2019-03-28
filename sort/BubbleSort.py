@@ -1,4 +1,8 @@
 # 冒泡泡排序
+import TimeUtils
+
+
+@TimeUtils.getTimeOfFunc
 def bubbleSort(alist):
     if len(alist) <= 1:
         return alist
@@ -10,7 +14,3 @@ def bubbleSort(alist):
             if alist[j] > alist[j + 1]:
                 alist[j], alist[j + 1] = alist[j + 1], alist[j]
     return alist
-
-
-alist = [1, 3, 2, 0, 5, 4, 9, 8, 6, 7]
-print(bubbleSort(alist))

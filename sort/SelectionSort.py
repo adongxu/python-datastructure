@@ -1,4 +1,8 @@
 # 选择排序(冒泡排序改进，每次只记录最大值的位置，不交换)
+import TimeUtils
+
+
+@TimeUtils.getTimeOfFunc
 def selectionSort(alist):
     if len(alist) <= 1:
         return alist
@@ -10,7 +14,3 @@ def selectionSort(alist):
         # 最大值和i处值交换位置
         alist[maxIndex], alist[i] = alist[i], alist[maxIndex]
     return alist
-
-
-alist = [1, 3, 2, 0, 5, 4, 9, 8, 6, 7]
-print(selectionSort(alist))
